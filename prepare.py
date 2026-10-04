@@ -24,7 +24,9 @@ import logging #getLogger basicConfig(level=logging.INFO,)
 # , Empty, Full
 from collections import Counter #Counter()["abc"] += 1 most_common
 from threading import Event     # e=threading.Event() e.set() e.clear() e.is_set() e.wait()
-from queue import Queue        # a=Queue(maxsize=5) a.put("k")  a.get(timeout=1) a.task_done()++ a.join()   size New: Block until get!!
+from queue import Queue, \
+    Empty, \
+    Full  # a=Queue(maxsize=5) a.put("k")  a.get(timeout=1) a.task_done()++ a.join()   size New: Block until get!!
 from collections import deque  # a=deque(maxlen=4)  a.append(1) a.popleft()    len  New: Delete Old!!!!!!!
 import heapq                   # jobs = [] heappush(jobs, (-3,"a")) heappop() | heapq.heapify(some_list)
 
